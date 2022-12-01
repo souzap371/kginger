@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 60,
           left: 40,
           right: 40,
@@ -22,12 +22,12 @@ class LoginPage extends StatelessWidget {
               height: 128,
               child: Image.asset('images/logo_kginger.png'),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
                   color: Colors.black38,
@@ -35,17 +35,17 @@ class LoginPage extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextFormField(
               keyboardType: TextInputType.text,
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Senha",
                 labelStyle: TextStyle(
                   color: Colors.black38,
@@ -53,7 +53,7 @@ class LoginPage extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
               ),
             ),
@@ -61,7 +61,7 @@ class LoginPage extends StatelessWidget {
               height: 40,
               alignment: Alignment.centerRight,
               child: TextButton(
-                child: Text(
+                child: const Text(
                   "Recuperar Senha",
                   style: TextStyle(
                     color: Color(0XFFd1715d),
@@ -70,13 +70,13 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {},
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
               height: 60,
               alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -95,7 +95,7 @@ class LoginPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Login",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -117,13 +117,13 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               height: 60,
               alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.all(
                   Radius.circular(5),
@@ -134,7 +134,7 @@ class LoginPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Login com Facebook",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -156,13 +156,13 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
               height: 40,
               child: TextButton(
-                child: Text(
+                child: const Text(
                   "Cadastre-se",
                   textAlign: TextAlign.center,
                   style: TextStyle(

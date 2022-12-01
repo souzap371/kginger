@@ -1,3 +1,4 @@
+import 'package:estoque_kginger/pages/home_page.dart';
 import 'package:estoque_kginger/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'K-Ginger',
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
