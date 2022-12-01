@@ -1,3 +1,4 @@
+import 'package:estoque_kginger/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,17 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'K-Ginger',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Color(0xFFf4ece3),
-        body: Center(
-          child: Column(
-            children: [
-              Image.asset('images/logo_kginger.png'),
-            ],
-          ),
-        ),
-      ),
+      home: LoginPage(),
     );
   }
 }
