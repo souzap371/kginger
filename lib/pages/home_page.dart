@@ -11,6 +11,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        title: Image.asset(
+          'images/logo_kginger.png',
+          height: 90,
+          width: 90,
+          alignment: FractionalOffset.center,
+        ),
         backgroundColor: Color(0xFFf4ece3),
         leading: IconButton(
           onPressed: () {},
@@ -39,10 +46,11 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       Container(
+                        padding: EdgeInsets.all(10),
                         child: SizedBox(
                           child: Image.asset('images/roupas_editada.png'),
-                          height: 90,
-                          width: 90,
+                          height: 100,
+                          width: 100,
                         ),
                       ),
                     ],
@@ -67,6 +75,8 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       Container(
+                        alignment: AlignmentDirectional.center,
+                        padding: EdgeInsets.all(10),
                         child: SizedBox(
                           child: Image.asset(
                               'images/adicionar-ficheiro_editada.png'),
@@ -81,7 +91,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 150),
+              padding: EdgeInsets.only(top: 100),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
