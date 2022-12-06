@@ -18,11 +18,36 @@ class HomePage extends StatelessWidget {
           width: 90,
           alignment: FractionalOffset.center,
         ),
-        backgroundColor: Color(0xFFf4ece3),
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu),
-          color: Color(0xFFd1715d),
+        backgroundColor: Color(0xFFd1715d),
+        // leading: IconButton(
+        //   onPressed: () {},
+        //   icon: Icon(Icons.menu),
+        //   color: Color(0xFFd1715d),
+        // ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xFFd1715d),
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              title: Text('Item 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Item 2'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Item 3'),
+              onTap: () {},
+            ),
+          ],
         ),
       ),
       body: Padding(

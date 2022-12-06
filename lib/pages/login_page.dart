@@ -57,6 +57,9 @@ class LoginPage extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Container(
               height: 40,
               alignment: Alignment.centerRight,
