@@ -33,19 +33,65 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color(0xFFd1715d),
               ),
-              child: Text('Drawer Header'),
+              child: Text(
+                'Bem Vindo(a)!',
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text(
+                'Perfil',
+                style: TextStyle(fontSize: 20),
+              ),
+              subtitle: Text('Perfil do Usuário'),
+              leading: Image.asset(
+                'images/perfil.png',
+                height: 40,
+                width: 40,
+              ),
+              trailing: Icon(Icons.arrow_forward),
+              autofocus: true,
               onTap: () {},
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text(
+                'Listar Produtos',
+                style: TextStyle(fontSize: 20),
+              ),
+              subtitle: Text('Produtos Cadastrados'),
+              leading: Image.asset(
+                'images/roupas_editada.png',
+                height: 40,
+                width: 40,
+              ),
+              trailing: Icon(Icons.arrow_forward),
+              autofocus: true,
               onTap: () {},
             ),
             ListTile(
-              title: Text('Item 3'),
+              title: Text(
+                'Cadastrar Produtos',
+                style: TextStyle(fontSize: 20),
+              ),
+              subtitle: Text('Novo Produto'),
+              leading: Image.asset(
+                'images/adicionar-ficheiro_editada.png',
+                height: 40,
+                width: 40,
+              ),
+              trailing: Icon(Icons.arrow_forward),
+              autofocus: true,
               onTap: () {},
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 310),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.exit_to_app),
+                color: Color(0xFFd1715d),
+                iconSize: 40,
+                alignment: Alignment.bottomLeft,
+              ),
             ),
           ],
         ),
@@ -113,24 +159,6 @@ class HomePage extends StatelessWidget {
                   ),
                   onPressed: () {},
                 ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 100),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  SizedBox(
-                    child: IconButton(
-                      autofocus: true,
-                      icon: Icon(
-                        Icons.exit_to_app,
-                        color: Color(0xFFd1715d),
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
-                ],
               ),
             ),
           ],
