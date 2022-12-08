@@ -68,6 +68,7 @@ flutter:
     - images/adicionar-ficheiro_editada.png
     - images/saida_editado.png
     - images/sair.png
+    - images/mulher.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

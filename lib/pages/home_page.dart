@@ -29,15 +29,22 @@ class HomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Color(0xFFd1715d),
-              ),
-              child: Text(
-                'Bem Vindo(a)!',
-                style: TextStyle(fontSize: 20),
+            UserAccountsDrawerHeader(
+              accountName: Text('Kahinara'),
+              accountEmail: Text('Kahinara@hotmail.com'),
+              currentAccountPicture: CircleAvatar(
+                child: Image.asset('images/mulher.png'),
+                backgroundColor: Color(0xFFd1715d),
               ),
             ),
+            // DrawerHeader(
+            //   decoration: BoxDecoration(
+            //   ),
+            //   child: Text(
+            //     'Bem Vindo(a)!',
+            //     style: TextStyle(fontSize: 20),
+            //   ),
+            // ),
             ListTile(
               title: Text(
                 'Perfil',
