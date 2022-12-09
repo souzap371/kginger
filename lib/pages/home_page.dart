@@ -1,12 +1,18 @@
 import 'dart:ui';
 
+import 'package:estoque_kginger/pages/listarProdutos_page.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +36,9 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xFFd1715d),
+              ),
               accountName: Text('Kahinara'),
               accountEmail: Text('Kahinara@hotmail.com'),
               currentAccountPicture: CircleAvatar(
@@ -37,14 +46,6 @@ class HomePage extends StatelessWidget {
                 backgroundColor: Color(0xFFd1715d),
               ),
             ),
-            // DrawerHeader(
-            //   decoration: BoxDecoration(
-            //   ),
-            //   child: Text(
-            //     'Bem Vindo(a)!',
-            //     style: TextStyle(fontSize: 20),
-            //   ),
-            // ),
             ListTile(
               title: Text(
                 'Perfil',
@@ -73,7 +74,12 @@ class HomePage extends StatelessWidget {
               ),
               trailing: Icon(Icons.arrow_forward),
               autofocus: true,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ListarProdutos()),
+                );
+              },
             ),
             ListTile(
               title: Text(
@@ -133,7 +139,12 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ListarProdutos()),
+                    );
+                  },
                 ),
               ),
             ),
