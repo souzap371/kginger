@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:estoque_kginger/pages/cadastrarProdutos.dart';
 import 'package:estoque_kginger/pages/listarProdutos_page.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -94,7 +95,12 @@ class _HomePageState extends State<HomePage> {
               ),
               trailing: Icon(Icons.arrow_forward),
               autofocus: true,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CadastrarProdutos()),
+                );
+              },
             ),
             Padding(
               padding: const EdgeInsets.only(top: 310),
@@ -175,7 +181,13 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CadastrarProdutos()),
+                    );
+                  },
                 ),
               ),
             ),
