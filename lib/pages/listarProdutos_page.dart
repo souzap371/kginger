@@ -1,10 +1,16 @@
+import 'package:estoque_kginger/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class ListarProdutos extends StatelessWidget {
+class ListarProdutos extends StatefulWidget {
   const ListarProdutos({super.key});
 
+  @override
+  State<ListarProdutos> createState() => _ListarProdutosState();
+}
+
+class _ListarProdutosState extends State<ListarProdutos> {
   _criarLinhaTable(String listaNomes) {
     return TableRow(
       children: listaNomes.split(',').map((name) {
@@ -27,6 +33,15 @@ class ListarProdutos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          },
+        ),
         backgroundColor: Color(0xFFd1715d),
         title: Image.asset(
           'images/logo_kginger.png',
@@ -42,7 +57,7 @@ class ListarProdutos extends StatelessWidget {
         alignment: Alignment.topCenter,
         child: ListView(
           children: [
-            Text(
+            const Text(
               'Listar Produtos',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -51,30 +66,147 @@ class ListarProdutos extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Column(
+            const SizedBox(
+              height: 10,
+              width: 10,
+            ),
+            Container(
+              child: Table(
+                defaultColumnWidth: FixedColumnWidth(70),
+                border: const TableBorder(
+                  horizontalInside: BorderSide(
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                    width: 1,
+                  ),
+                  verticalInside: BorderSide(
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                    width: 1,
+                  ),
+                ),
+                children: [
+                  _criarLinhaTable(
+                    "ID, NOME, QTD, P M G, PREÇO",
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 350),
+              child: Container(
+                child: const Text(
+                  'Filtrar',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+              width: 5,
+            ),
+            Row(
               children: [
-                SizedBox(
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('ID'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFd1715d),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                ),
+                const SizedBox(
                   height: 10,
                   width: 10,
                 ),
-                Container(
-                  child: Table(
-                    defaultColumnWidth: FixedColumnWidth(70),
-                    border: TableBorder(
-                      horizontalInside: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid,
-                        width: 1,
-                      ),
-                      verticalInside: BorderSide(
-                        color: Colors.black,
-                        style: BorderStyle.solid,
-                        width: 1,
-                      ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('NOME'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFd1715d),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    children: [
-                      _criarLinhaTable("ID, NOME, QTD, P M G, PREÇO"),
-                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('TAMANHO'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFd1715d),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('PREÇO'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFd1715d),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+              width: 20,
+            ),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('PESQUISAR'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFd1715d),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('DELETAR'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFd1715d),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('LIMPAR FILTRO'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFFd1715d),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
                   ),
                 ),
               ],

@@ -1,3 +1,4 @@
+import 'package:estoque_kginger/pages/cadastrarProdutos.dart';
 import 'package:estoque_kginger/pages/home_page.dart';
 import 'package:estoque_kginger/pages/listarProdutos_page.dart';
 import 'package:estoque_kginger/pages/login_page.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'K-Ginger',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: CadastrarProdutos(),
     );
   }
 }
