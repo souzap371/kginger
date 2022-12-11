@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'K-Ginger',
       debugShowCheckedModeBanner: false,
-      home: CadastrarProdutos(),
+      home: ListarProdutos(),
     );
   }
 }

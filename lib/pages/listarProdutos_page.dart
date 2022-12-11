@@ -42,6 +42,12 @@ class _ListarProdutosState extends State<ListarProdutos> {
             );
           },
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.filter_alt_sharp),
+          ),
+        ],
         backgroundColor: Color(0xFFd1715d),
         title: Image.asset(
           'images/logo_kginger.png',
@@ -71,6 +77,11 @@ class _ListarProdutosState extends State<ListarProdutos> {
               width: 10,
             ),
             Container(
+              height: 600,
+              decoration: BoxDecoration(
+                border: Border.all(width: 2.0),
+                borderRadius: BorderRadius.circular(10),
+              ),
               child: Table(
                 defaultColumnWidth: FixedColumnWidth(70),
                 border: const TableBorder(
@@ -91,125 +102,6 @@ class _ListarProdutosState extends State<ListarProdutos> {
                   ),
                 ],
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 350),
-              child: Container(
-                child: const Text(
-                  'Filtrar',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 5,
-              width: 5,
-            ),
-            Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('ID'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFd1715d),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                  width: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('NOME'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFd1715d),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                  width: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('TAMANHO'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFd1715d),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                  width: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('PREÇO'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFd1715d),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-              width: 20,
-            ),
-            Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('PESQUISAR'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFd1715d),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                  width: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('DELETAR'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFd1715d),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                  width: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('LIMPAR FILTRO'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFd1715d),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
-                ),
-              ],
             ),
           ],
         ),
