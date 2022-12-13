@@ -10,6 +10,12 @@ class CadastrarProdutos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.save),
+          ),
+        ],
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -53,12 +59,33 @@ class CadastrarProdutos extends StatelessWidget {
                 border: Border.all(width: 2.0),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Row(
-                children: [
-                  Text(
-                    'ID',
+              child: Center(
+                child: Form(
+                  child: ListView(
+                    children: [
+                      TextFormField(
+                        decoration: InputDecoration(
+                          labelText: 'NOME',
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          labelText: 'QUANTIDADE',
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          labelText: 'TAMANHO',
+                        ),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          labelText: 'VALOR',
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
           ],
