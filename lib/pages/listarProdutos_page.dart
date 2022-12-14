@@ -1,3 +1,4 @@
+import 'package:estoque_kginger/pages/filtrarProdutos.dart';
 import 'package:estoque_kginger/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -44,7 +45,14 @@ class _ListarProdutosState extends State<ListarProdutos> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FiltrarProdutos(),
+                ),
+              );
+            },
             icon: Icon(Icons.filter_alt_sharp),
           ),
         ],
