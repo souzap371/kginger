@@ -10,12 +10,6 @@ class CadastrarProdutos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.save),
-          ),
-        ],
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -63,24 +57,82 @@ class CadastrarProdutos extends StatelessWidget {
                 child: Form(
                   child: ListView(
                     children: [
-                      TextFormField(
-                        decoration: InputDecoration(
-                          labelText: 'NOME',
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            border: new OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                            ),
+                            labelText: 'NOME DO PRODUTO',
+                          ),
                         ),
                       ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          labelText: 'QUANTIDADE',
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            border: new OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                            ),
+                            labelText: 'QUANTIDADE',
+                          ),
                         ),
                       ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          labelText: 'TAMANHO',
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            border: new OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                            ),
+                            labelText: 'TAMANHO',
+                          ),
                         ),
                       ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          labelText: 'VALOR',
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            border: new OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(8.0),
+                              ),
+                            ),
+                            labelText: 'VALOR',
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 40),
+                        child: Center(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Text(
+                                  'Salvar',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                  ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Color(0xFFd1715d),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],

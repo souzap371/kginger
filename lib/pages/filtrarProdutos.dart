@@ -58,6 +58,18 @@ class _FiltrarProdutosState extends State<FiltrarProdutos> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       focusColor: Color(0xFFd1715d),
+                      labelText: 'Código do Produto',
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: TextFormField(
+                    keyboardType: TextInputType.text,
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      focusColor: Color(0xFFd1715d),
                       labelText: 'Nome do Produto',
                     ),
                   ),
@@ -83,6 +95,28 @@ class _FiltrarProdutosState extends State<FiltrarProdutos> {
                       border: OutlineInputBorder(),
                       focusColor: Color(0xFFd1715d),
                       labelText: 'Preço do Produto',
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Filtrar',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFFd1715d),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
