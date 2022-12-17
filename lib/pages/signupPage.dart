@@ -1,10 +1,10 @@
-import 'package:estoque_kginger/pages/signupPage.dart';
+import 'package:estoque_kginger/pages/login_page.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatelessWidget {
+  const SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,24 @@ class LoginPage extends StatelessWidget {
             ),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
+              decoration: const InputDecoration(
+                labelText: "Nome Completo",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: const TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
               decoration: const InputDecoration(
                 labelText: "E-mail",
                 labelStyle: TextStyle(
@@ -61,21 +79,30 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              height: 40,
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                child: const Text(
-                  "Recuperar Senha",
-                  style: TextStyle(
-                    color: Color(0XFFd1715d),
-                  ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: const InputDecoration(
+                labelText: "Confirmar Senha",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
                 ),
-                onPressed: () {},
+              ),
+              style: const TextStyle(
+                fontSize: 20,
               ),
             ),
             const SizedBox(
               height: 40,
+            ),
+            SizedBox(
+              height: 28,
+              width: 28,
             ),
             Container(
               height: 60,
@@ -100,87 +127,45 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        "Login",
+                        "Cadastrar",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontSize: 20,
                         ),
-                        textAlign: TextAlign.left,
+                        textAlign: TextAlign.center,
                       ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset('images/login.png'),
-                          height: 28,
-                          width: 28,
-                        ),
-                      ),
+                      Image.asset('images/login.png'),
                     ],
                   ),
                   onPressed: () => {},
                 ),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
             Container(
-              height: 60,
-              alignment: Alignment.centerLeft,
-              decoration: const BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                ),
-              ),
-              child: SizedBox.expand(
+              padding: EdgeInsets.only(top: 10),
+              child: SizedBox(
+                height: 40,
+                width: 40,
                 child: TextButton(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "Login com Facebook",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.left,
+                  child: Center(
+                    child: Text(
+                      'Voltar',
+                      style: TextStyle(
+                        color: Color(0xFFd1715d),
+                        fontSize: 20,
                       ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset('images/facebook.png'),
-                          height: 28,
-                          width: 28,
-                        ),
-                      ),
-                    ],
-                  ),
-                  onPressed: () {},
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: 40,
-              child: TextButton(
-                child: const Text(
-                  "Cadastre-se",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color(0xFFd1715d),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SignupPage(),
                     ),
-                  );
-                },
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginPage(),
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
           ],

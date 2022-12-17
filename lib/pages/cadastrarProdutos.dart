@@ -68,6 +68,10 @@ class CadastrarProdutos extends StatelessWidget {
                               ),
                             ),
                             labelText: 'NOME DO PRODUTO',
+                            labelStyle: TextStyle(
+                              color: Color(0xFFd1715d),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
@@ -82,6 +86,10 @@ class CadastrarProdutos extends StatelessWidget {
                               ),
                             ),
                             labelText: 'QUANTIDADE',
+                            labelStyle: TextStyle(
+                              color: Color(0xFFd1715d),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
@@ -96,6 +104,10 @@ class CadastrarProdutos extends StatelessWidget {
                               ),
                             ),
                             labelText: 'TAMANHO',
+                            labelStyle: TextStyle(
+                              color: Color(0xFFd1715d),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
@@ -110,6 +122,10 @@ class CadastrarProdutos extends StatelessWidget {
                               ),
                             ),
                             labelText: 'VALOR',
+                            labelStyle: TextStyle(
+                              color: Color(0xFFd1715d),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),

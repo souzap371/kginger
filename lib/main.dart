@@ -3,6 +3,7 @@ import 'package:estoque_kginger/pages/filtrarProdutos.dart';
 import 'package:estoque_kginger/pages/home_page.dart';
 import 'package:estoque_kginger/pages/listarProdutos_page.dart';
 import 'package:estoque_kginger/pages/login_page.dart';
+import 'package:estoque_kginger/pages/signupPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

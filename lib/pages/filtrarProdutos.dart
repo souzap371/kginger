@@ -59,6 +59,10 @@ class _FiltrarProdutosState extends State<FiltrarProdutos> {
                       border: OutlineInputBorder(),
                       focusColor: Color(0xFFd1715d),
                       labelText: 'Código do Produto',
+                      labelStyle: TextStyle(
+                        color: Color(0xFFd1715d),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -71,6 +75,10 @@ class _FiltrarProdutosState extends State<FiltrarProdutos> {
                       border: OutlineInputBorder(),
                       focusColor: Color(0xFFd1715d),
                       labelText: 'Nome do Produto',
+                      labelStyle: TextStyle(
+                        color: Color(0xFFd1715d),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -83,6 +91,10 @@ class _FiltrarProdutosState extends State<FiltrarProdutos> {
                       border: OutlineInputBorder(),
                       focusColor: Color(0xFFd1715d),
                       labelText: 'Tamanho do Produto',
+                      labelStyle: TextStyle(
+                        color: Color(0xFFd1715d),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -95,6 +107,10 @@ class _FiltrarProdutosState extends State<FiltrarProdutos> {
                       border: OutlineInputBorder(),
                       focusColor: Color(0xFFd1715d),
                       labelText: 'Preço do Produto',
+                      labelStyle: TextStyle(
+                        color: Color(0xFFd1715d),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
