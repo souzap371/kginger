@@ -8,6 +8,11 @@ class CadastrarProdutos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final nomeController = TextEditingController();
+    final precoController = TextEditingController();
+    final tamanhoController = TextEditingController();
+    final quantidadeController = TextEditingController();
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -47,118 +52,169 @@ class CadastrarProdutos extends StatelessWidget {
               height: 10,
               width: 10,
             ),
-            Container(
-              height: 600,
-              decoration: BoxDecoration(
-                border: Border.all(width: 2.0),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Form(
-                  child: ListView(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            filled: true,
-                            border: new OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8.0),
-                              ),
-                            ),
-                            labelText: 'NOME DO PRODUTO',
-                            labelStyle: TextStyle(
+            Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    TextField(
+                      controller: nomeController,
+                      decoration: InputDecoration(
+                        labelText: 'Nome Produto',
+                      ),
+                    ),
+                    TextField(
+                      controller: tamanhoController,
+                      decoration: InputDecoration(
+                        labelText: 'Tamanho (P M G)',
+                      ),
+                    ),
+                    TextField(
+                      controller: quantidadeController,
+                      decoration: InputDecoration(
+                        labelText: 'Quantidade',
+                      ),
+                    ),
+                    TextField(
+                      controller: precoController,
+                      decoration: InputDecoration(
+                        labelText: 'Valor unitário(R\$)',
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            print(nomeController.text);
+                            print(precoController.text);
+                          },
+                          child: Text(
+                            'Cadastrar',
+                            style: TextStyle(
                               color: Color(0xFFd1715d),
-                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            filled: true,
-                            border: new OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8.0),
-                              ),
-                            ),
-                            labelText: 'QUANTIDADE',
-                            labelStyle: TextStyle(
-                              color: Color(0xFFd1715d),
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            filled: true,
-                            border: new OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8.0),
-                              ),
-                            ),
-                            labelText: 'TAMANHO',
-                            labelStyle: TextStyle(
-                              color: Color(0xFFd1715d),
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            filled: true,
-                            border: new OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8.0),
-                              ),
-                            ),
-                            labelText: 'VALOR',
-                            labelStyle: TextStyle(
-                              color: Color(0xFFd1715d),
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 40),
-                        child: Center(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              ElevatedButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'Salvar',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color(0xFFd1715d),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),
+            // Container(
+            //   height: 600,
+            //   decoration: BoxDecoration(
+            //     border: Border.all(width: 2.0),
+            //     borderRadius: BorderRadius.circular(10),
+            //   ),
+            //   child: Center(
+            //     child: Form(
+            //       child: ListView(
+            //         children: [
+            //           Padding(
+            //             padding: const EdgeInsets.all(10),
+            //             child: TextFormField(
+            //               decoration: InputDecoration(
+            //                 filled: true,
+            //                 border: new OutlineInputBorder(
+            //                   borderRadius: BorderRadius.all(
+            //                     Radius.circular(8.0),
+            //                   ),
+            //                 ),
+            //                 labelText: 'NOME DO PRODUTO',
+            //                 labelStyle: TextStyle(
+            //                   color: Color(0xFFd1715d),
+            //                   fontWeight: FontWeight.bold,
+            //                 ),
+            //               ),
+            //             ),
+            //           ),
+            //           Padding(
+            //             padding: const EdgeInsets.all(10),
+            //             child: TextFormField(
+            //               decoration: InputDecoration(
+            //                 filled: true,
+            //                 border: new OutlineInputBorder(
+            //                   borderRadius: BorderRadius.all(
+            //                     Radius.circular(8.0),
+            //                   ),
+            //                 ),
+            //                 labelText: 'QUANTIDADE',
+            //                 labelStyle: TextStyle(
+            //                   color: Color(0xFFd1715d),
+            //                   fontWeight: FontWeight.bold,
+            //                 ),
+            //               ),
+            //             ),
+            //           ),
+            //           Padding(
+            //             padding: const EdgeInsets.all(10),
+            //             child: TextFormField(
+            //               decoration: InputDecoration(
+            //                 filled: true,
+            //                 border: new OutlineInputBorder(
+            //                   borderRadius: BorderRadius.all(
+            //                     Radius.circular(8.0),
+            //                   ),
+            //                 ),
+            //                 labelText: 'TAMANHO',
+            //                 labelStyle: TextStyle(
+            //                   color: Color(0xFFd1715d),
+            //                   fontWeight: FontWeight.bold,
+            //                 ),
+            //               ),
+            //             ),
+            //           ),
+            //           Padding(
+            //             padding: const EdgeInsets.all(10),
+            //             child: TextFormField(
+            //               decoration: InputDecoration(
+            //                 filled: true,
+            //                 border: new OutlineInputBorder(
+            //                   borderRadius: BorderRadius.all(
+            //                     Radius.circular(8.0),
+            //                   ),
+            //                 ),
+            //                 labelText: 'VALOR',
+            //                 labelStyle: TextStyle(
+            //                   color: Color(0xFFd1715d),
+            //                   fontWeight: FontWeight.bold,
+            //                 ),
+            //               ),
+            //             ),
+            //),
+            // Padding(
+            //   padding: const EdgeInsets.only(top: 40),
+            //   child: Center(
+            //     child: Column(
+            //       mainAxisSize: MainAxisSize.min,
+            //       children: [
+            //         ElevatedButton(
+            //           onPressed: () {},
+            //           child: Text(
+            //             'Salvar',
+            //             style: TextStyle(
+            //               fontSize: 20,
+            //             ),
+            //           ),
+            //           style: ElevatedButton.styleFrom(
+            //             backgroundColor: Color(0xFFd1715d),
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
     );
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    // );
   }
 }

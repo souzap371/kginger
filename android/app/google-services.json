@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1040962446509",
+    "firebase_url": "https://kginger-estoque-default-rtdb.firebaseio.com",
+    "project_id": "kginger-estoque",
+    "storage_bucket": "kginger-estoque.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040962446509:android:3710f303ff6afa75ccd224",
+        "android_client_info": {
+          "package_name": "com.example.estoque_kginger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040962446509-jel2brqee0fql3qcgtdctoaj9u77airu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAROt4nqrz8fXehCTjnTmFNGIY5cqff7SU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040962446509-jel2brqee0fql3qcgtdctoaj9u77airu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

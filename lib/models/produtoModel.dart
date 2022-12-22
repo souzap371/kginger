@@ -1,15 +1,20 @@
+import 'dart:math';
+import 'package:flutter/foundation.dart';
+
+import 'package:flutter/material.dart';
+
 class ProdutoModel {
-  String? id;
-  String? name;
-  String? quantidade;
-  String? tamanho;
-  String? preco;
+  final String? id;
+  final String? name;
+  final int? quantidade;
+  final String? tamanho;
+  final double? preco;
 
   ProdutoModel({
     this.id,
-    this.name,
-    this.quantidade,
-    this.tamanho,
-    this.preco,
+    @required this.name,
+    @required this.quantidade,
+    @required this.tamanho,
+    @required this.preco,
   });
 }
