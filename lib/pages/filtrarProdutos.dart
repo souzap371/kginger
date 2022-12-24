@@ -28,7 +28,9 @@ class _FiltrarProdutosState extends State<FiltrarProdutos> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ListarProdutos(),
+                builder: (context) => ListarProdutos(
+                  produtos: [],
+                ),
               ),
             );
           },

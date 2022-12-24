@@ -1,18 +1,33 @@
+import 'dart:ffi';
+
 import 'package:estoque_kginger/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class CadastrarProdutos extends StatelessWidget {
-  const CadastrarProdutos({super.key});
+class CadastrarProdutos extends StatefulWidget {
+  const CadastrarProdutos({
+    Key? key,
+    required this.onSubmit,
+  }) : super(key: key);
+
+  final void Function(String, String, int, double) onSubmit;
+
+  @override
+  State<CadastrarProdutos> createState() => _CadastrarProdutosState();
+}
+
+class _CadastrarProdutosState extends State<CadastrarProdutos> {
+  final nomeController = TextEditingController();
+
+  final tamanhoController = TextEditingController();
+
+  final quantidadeController = TextEditingController();
+
+  final precoController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    final nomeController = TextEditingController();
-    final precoController = TextEditingController();
-    final tamanhoController = TextEditingController();
-    final quantidadeController = TextEditingController();
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -87,8 +102,14 @@ class CadastrarProdutos extends StatelessWidget {
                       children: [
                         TextButton(
                           onPressed: () {
-                            print(nomeController.text);
-                            print(precoController.text);
+                            final name = nomeController.text;
+                            final tamanho = tamanhoController.text;
+                            final quantidade =
+                                int.tryParse(quantidadeController.text) ?? 0;
+                            final preco =
+                                double.tryParse(precoController.text) ?? 0.0;
+                            //chamada da funcao onSubmit
+                            widget.onSubmit(name, tamanho, quantidade, preco);
                           },
                           child: Text(
                             'Cadastrar',

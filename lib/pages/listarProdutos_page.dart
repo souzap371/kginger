@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:estoque_kginger/data/dummyData.dart';
 import 'package:estoque_kginger/models/produtoModel.dart';
 import 'package:estoque_kginger/pages/filtrarProdutos.dart';
@@ -6,9 +8,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class ListarProdutos extends StatelessWidget {
-  const ListarProdutos({super.key});
+class ListarProdutos extends StatefulWidget {
+  //Criar lista
+  final List<ProdutoModel> produtos;
 
+  //Contrutor
+
+  //const ListarProdutos({super.key});
+  const ListarProdutos({
+    Key? key,
+    required this.produtos,
+  }) : super(key: key);
+
+  @override
+  State<ListarProdutos> createState() => _ListarProdutosState();
+}
+
+class _ListarProdutosState extends State<ListarProdutos> {
   @override
   Widget build(BuildContext context) {
     final _produtos = [
@@ -27,6 +43,20 @@ class ListarProdutos extends StatelessWidget {
         preco: 170.80,
       ),
     ];
+
+    _addProdutos(String name, double preco, int quantidade, String tamanho) {
+      final newProdutos = ProdutoModel(
+        id: Random().nextDouble().toString(),
+        name: name,
+        quantidade: quantidade,
+        tamanho: tamanho,
+        preco: preco,
+      );
+
+      setState(() {
+        _produtos.add(newProdutos);
+      });
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -90,7 +120,7 @@ class ListarProdutos extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.purple,
+                          color: Color(0xFFd1715d),
                           width: 2,
                         ),
                       ),

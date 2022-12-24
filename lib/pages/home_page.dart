@@ -78,7 +78,11 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ListarProdutos()),
+                  MaterialPageRoute(
+                    builder: (context) => ListarProdutos(
+                      produtos: [],
+                    ),
+                  ),
                 );
               },
             ),
@@ -98,7 +102,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CadastrarProdutos()),
+                  MaterialPageRoute(builder: (context) => CadastrarProdutos()
                 );
               },
             ),
@@ -148,7 +152,11 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListarProdutos()),
+                      MaterialPageRoute(
+                        builder: (context) => ListarProdutos(
+                          produtos: [],
+                        ),
+                      ),
                     );
                   },
                 ),
