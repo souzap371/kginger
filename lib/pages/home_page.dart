@@ -1,21 +1,15 @@
-import 'dart:ui';
-
+import 'package:estoque_kginger/data/appstore.dart';
 import 'package:estoque_kginger/pages/cadastrarProdutos.dart';
 import 'package:estoque_kginger/pages/listarProdutos_page.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
+    var store = Provider.of<AppStore>(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -40,10 +34,10 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 color: Color(0xFFd1715d),
               ),
-              accountName: Text('Kahinara'),
-              accountEmail: Text('Kahinara@hotmail.com'),
+              accountName: Text(store.name),
+              accountEmail: Text(store.email),
               currentAccountPicture: CircleAvatar(
-                child: Image.asset('images/mulher.png'),
+                child: Image.network(store.picture),
                 backgroundColor: Color(0xFFd1715d),
               ),
             ),
@@ -101,9 +95,10 @@ class _HomePageState extends State<HomePage> {
               autofocus: true,
               onTap: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CadastrarProdutos()
-                );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CadastrarProdutos(),
+                    ));
               },
             ),
             Padding(
@@ -191,10 +186,10 @@ class _HomePageState extends State<HomePage> {
                   ),
                   onPressed: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => CadastrarProdutos()),
-                    );
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CadastrarProdutos(),
+                        ));
                   },
                 ),
               ),
